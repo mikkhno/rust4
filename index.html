@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пейджер 1.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="login-register" class="auth-container">
+    <div id="login-form" class="auth-form">
+        <h2>Вхід у систему</h2>
+        <input type="text" id="login-username" placeholder="Логін" />
+        <input type="password" id="login-password" placeholder="Пароль" />
+        <button onclick="login()">Вхід</button>
+        <p>Немає акаунта? <a href="javascript:void(0);" onclick="toggleForm()">Зареєструватися</a></p>
+    </div>
+
+    <div id="register-form" class="auth-form" style="display: none;">
+        <h2>Реєстрація</h2>
+        <input type="text" id="register-username" placeholder="Логін" />
+        <input type="password" id="register-password" placeholder="Пароль" />
+        <button onclick="register()">Реєстрація</button>
+        <p>Вже маєте акаунт? <a href="javascript:void(0);" onclick="toggleForm()">Увійти</a></p>
+    </div>
+</div>
+
+<div id="chat-container" class="chat-container" style="display: none;">
+    <div id="user-list" class="user-list">
+        <h3>Зареєстровані користувачі</h3>
+        <ul id="users"></ul>
+    </div>
+
+    <div id="chat-window" class="chat-window">
+        <h3>Вітаємо, <span id="current-user"></span></h3>
+        <h3>Діалог з <span id="chat-with"></span></h3>
+        <div id="messages" class="messages"></div>
+        <div id="type-send"><input type="text" id="message-input" placeholder="Напишіть повідомлення..." />
+        <button onclick="sendMessage()">Надіслати</button>
+        </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
